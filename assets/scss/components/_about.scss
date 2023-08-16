@@ -1,15 +1,10 @@
 .about {
   position: relative;
   overflow: hidden;
-  padding: 80px 0 160px;
 
   @include desktop {
     text-align: center;
-    padding-bottom: 60px;
-  }
-
-  &-title {
-    margin-bottom: 110px;
+    padding-bottom: 80px;
   }
 
   &-image {
@@ -25,8 +20,7 @@
     }
 
     img {
-      max-width: 80%;
-      border-radius: 11px;
+      max-width: 100%;
     }
 
     &-shape1 {
@@ -74,7 +68,6 @@
     @include desktop {
       text-align: center;
       margin-bottom: 30px;
-      padding: 50px 0 0;
     }
 
     h2 {
@@ -84,10 +77,6 @@
         font-size: 35px;
         line-height: 40px;
       }
-    }
-
-    h3 {
-      color: $primary-color;
     }
 
     p {
@@ -147,9 +136,4 @@
       }
     }
   }
-
-  .row.align-items-center {
-    padding: 10px 0 65px;
-  }
-
 }
