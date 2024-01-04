@@ -54,13 +54,13 @@
           </p>
           <ul class="footer-description-social">
             <li>
-              <a href="{{ .Site.Params.social.linkedIn }}"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="{{ .Site.Params.social.linkedIn }}" aria-label="Link LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
             </li>
             <!--<li>
               <a href="{{ .Site.Params.social.twitter }}"><i class="fa-brands fa-x-twitter"></i></a>
             </li>-->
             <li>
-              <a href="{{ .Site.Params.social.github }}"><i class="fa-brands fa-github"></i></a>
+              <a href="{{ .Site.Params.social.github }}" aria-label="Link Github"><i class="fa-brands fa-github"></i></a>
             </li>
           </ul>
         </div>
@@ -72,7 +72,7 @@
             <ul>
               {{ $sitemap := .Site.Menus.sitemap }}
                 {{ range $sitemap }}
-                  <li><a href="{{ $.Site.LanguagePrefix }}{{ .URL }}">{{ .Name }}</a></li>
+                  <li><a href="{{ $.Site.LanguagePrefix }}{{ .URL }}" aria-label={{ .Name }}>{{ .Name }}</a></li>
               {{ end }}
             </ul>
           </div>
@@ -85,7 +85,7 @@
           <div class="footer-widget-list">
             <ul>
               <!-- <li><a href="tel:{{ $address.phone }}"><i class="ti-mobile"></i>{{ $address.phone }}</a></li> --> 
-              <li><a href="mailto:{{ $address.email }}"><i class="ti-email"></i>{{ $address.email }}</a></li>
+              <li><a href="mailto:{{ $address.email }}" aria-label={{ $address.email }}><i class="ti-email"></i>{{ $address.email }}</a></li>
               <!-- <li><p><i class="ti-pin"></i>{{ $address.address }}</p></li> -->
             </ul>
           </div>

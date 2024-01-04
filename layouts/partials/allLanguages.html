@@ -2,7 +2,7 @@
 <div class="account-list list-inline">
 	<div class="list-inline-item">
 	{{ range .Translations }}
-		<a href="{{ .Permalink }}"><i class="fa-solid fa-globe fa-lg"></i> {{ .Language.LanguageName }}</a>
+		<a href="{{ .Permalink }}"><i class="fa-solid fa-globe fa-lg" aria-label={{ .Language.LanguageName }}></i> {{ .Language.LanguageName }}</a>
 	{{ end}}
 	</div>
 </div>
