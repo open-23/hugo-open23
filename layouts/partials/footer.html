@@ -52,7 +52,7 @@
   </div>
 </footer>
 
-{{ $style := resources.Get "scss/non-critical.scss" | resources.ToCSS | minify }}
+{{ $style := resources.Get "scss/non-critical.scss" | css.Sass | minify }}
 <link href="{{ $style.Permalink }}" rel="stylesheet" />
 {{ $vendor := resources.Get "js/vendor.js" | minify }}
 <script src="{{ $vendor.Permalink }}"></script>
