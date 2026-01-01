@@ -24,7 +24,7 @@ Checkout the live demo [here](https://open23.de/)
 ## Installation
 
 1. Add the repository into your Hugo Project repository as a submodule,
-   `git submodule add git@github.com:StaticMania/hugo-hugo-open23.git
+   `git submodule add git@github.com:open-23/hugo-open23.git
    themes/hugo-open23`.
 
 2. Copy the  `data`, `content`, `static`, `resources` & `hugo.toml` files from
@@ -56,5 +56,4 @@ Checkout the live demo [here](https://open23.de/)
 
 ## Licensing
 
-This Repository is licensed under the
-[MIT](https://github.com/open-23/hugo-open23/blob/main/LICENSE) License
+This Repository is licensed under the [MIT](https://github.com/open-23/hugo-open23/blob/main/LICENSE) License.
