@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  padding: 150px 0 100px;
+  padding: 150px 0 80px;
   overflow: hidden;
   @include desktop {
     text-align: center;
@@ -17,18 +17,10 @@
     top: 0;
     left: 0;
     svg {
-      &:first-child {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 48%;
-      }
-      &:last-child {
-        width: 10%;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65%;
     }
   }
 
@@ -46,7 +38,7 @@
     h1 {
       margin-bottom: 25px;
       @include tablet {
-        font-size: 40px;
+        font-size: 50px;
         line-height: 52px;
       }
     }
@@ -87,7 +79,9 @@
   &-image {
     margin: -40px;
     img {
-      max-width: 100%;
+      max-width: 120%;
+      max-height: 120%;
+      padding-bottom: 19%;
     }
     @include desktop {
       margin: 0 auto 40px;
@@ -111,7 +105,7 @@
     svg {
       path {
         &:first-child {
-          fill: #ffecee;
+          fill: $text-color;
         }
       }
     }

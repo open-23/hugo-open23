@@ -1,0 +1,121 @@
+{{ $data := index site.Data site.Language.Lang }}
+{{ with $data.about }}
+  {{ if .enable }}
+    <section class="about" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="section-title about-title">
+              <h2>{{ .title }}</h2>
+              <p>{{ .subTitle }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="about-image">
+              <img
+                src={{ .shapeImageFirst1 | absURL  }}
+                class="about-image-shape1"
+                style="left: 1%; top: -47%;"
+                alt="about-image-shape"
+              />
+              <img
+              src={{ .shapeImageFirst2 | absURL  }}
+              style="right: 48%; top: -46%;;"
+              class="about-image-shape4"
+              alt="about-image-shape"
+              />
+              <img
+                src={{ .image1 | absURL  }}
+                alt="about-image"
+              />
+              <img
+                src={{ .shapeImageFirst3 | absURL  }}
+                style="right: -13%; top: 45%;"
+                class="about-image-shape2"
+                alt="about-image-shape"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-content ml-25">
+              <h3>
+                {{ .firstName }}
+              </h3>
+              <p>
+                {{ .description }}
+              </p>
+              <p>
+                {{ .description2 }}
+              </p>
+              {{ range .firstSocial.links }}
+              <a href="{{ .url }}" target="_blank">
+                <i class="{{ .icon }}"></i> {{ .title }}
+              </a>
+              {{ end }}
+              <!--
+              <a href="#" data-text={{ .buttonText }} class="btn btn-primary">
+                <span>{{ .buttonText }}</span>
+              </a>
+              !-->
+            </div>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="about-content mr-25">
+              <h3>
+                {{ .secondName }}
+              </h3>
+              <p>
+                {{ .description2nd }}
+              </p>
+              <p>
+                {{ .description2nd2 }}
+              </p>
+              {{ range .secondSocial.links }}
+              <a href="{{ .url }}" target="_blank">
+                <i class="{{ .icon }}"></i> {{ .title }}
+              </a>
+              {{ end }}
+              <!--
+              <div class="about-content-list">
+                <ul>
+                  {{ $Section := .checkItem }}
+                  {{ range $Section }}
+                    <li>
+                      <i class="ti-check"></i>
+                      <p> {{ .text }} </p>
+                    </li>
+                  {{ end }}
+                </ul>
+              </div>
+              !-->
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="about-image">         
+              <img
+                src={{ .shapeImageSecond1 | absURL  }}
+                class="about-image-shape3"
+                style="right: 49%; top: 28%;"
+                alt="about-image-shape"
+              />      
+              <img
+                src={{ .image2 | absURL  }}
+                alt="about-image"
+              />
+              <img
+                src={{ .shapeImageSecond2 | absURL  }}
+                style="left: -20%; top: 42%;"
+                class="about-image-shape4"
+                alt="about-image-shape"
+              /> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

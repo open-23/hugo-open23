@@ -1,5 +1,9 @@
 a {
   color: $primary-color;
+  &:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
 }
 
 .section {
@@ -61,7 +65,7 @@ a {
     background-color: $white;
     text-align: center;
     margin: 130px 100px 0;
-    background: #f9f2ea;
+    background: $secondary-color-transparent;
     border-radius: 50px;
     @include desktop-xl {
       margin: 130px 50px 0;
@@ -77,7 +81,7 @@ a {
     }
     h1 {
       @include desktop {
-        font-size: 40px;
+        font-size: 26px;
       }
       margin-bottom: 20px;
     }
@@ -93,7 +97,7 @@ a {
   &-content {
     padding: 10px 50px 30px;
     &-wrapper {
-      padding: 40px 50px;
+      padding: 40px 35px;
       background-color: white;
       border-radius: 10px;
       margin-top: -150px;

@@ -4,7 +4,7 @@ body {
   font-family: $primary-font;
   font-size: 16px;
   color: $text-color;
-  background: $body-color;
+  background: $white;
 }
 
 h1,
@@ -17,16 +17,18 @@ h6 {
   font-family: $primary-font;
   font-weight: 700;
   letter-spacing: 0.5px;
+  overflow-wrap: break-word;
 }
 
 p {
   font-size: 16px;
   color: $text-color;
   line-height: 26px;
+  overflow-wrap: break-word;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 65px;
   line-height: 70px;
 }
 
@@ -36,9 +38,13 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 28px;
 }
 
 h4 {
+  font-size: 23px;
+}
+
+h5 {
   font-size: 20px;
 }

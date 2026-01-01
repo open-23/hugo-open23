@@ -75,7 +75,7 @@
 .btn-platform {
   display: flex;
   padding: 15px 40px;
-  border: 2px solid $text-color-dark;
+  border: 2px solid $black-grey;
   align-items: center;
   border-radius: 10px;
   font-weight: 600;
@@ -90,14 +90,14 @@
 
   i {
     svg {
-      fill: $text-color-dark;
+      fill: $black-grey;
       transition: all 0.3s ease-in-out;
     }
   }
 
   &-area {
     margin-left: 12px;
-    color: $text-color-dark;
+    color: $black-grey;
     font-size: 18px;
     transition: all 0.3s ease-in-out;
 
