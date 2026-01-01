@@ -66,6 +66,11 @@
     transition: transform 0.3s $site-ease;
     overflow: hidden;
 
+    // CSS Flexbox for equal height (replaces matchHeight.js)
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+
     &::after {
       position: absolute;
       content: "";
@@ -114,6 +119,9 @@
 
   &-content {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1; // Takes remaining space
 
     img {
       width: 45%;
@@ -136,6 +144,7 @@
       font-size: 16px;
       line-height: 28px;
       margin-bottom: 0;
+      flex: 1; // Description fills available space
     }
   }
 }
