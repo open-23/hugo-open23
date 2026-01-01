@@ -14,7 +14,7 @@ Apsho Hugo – App Landing Page is the perfect app showcase Hugo Theme. Apsho is
 
 ## Live Demo
 
-Checkout the live demo [here](https://apsho-hugo.staticmania.com/)
+Checkout the live demo [here](https://open23.de/)
 
 ## Installation
 
@@ -28,7 +28,7 @@ Checkout the live demo [here](https://apsho-hugo.staticmania.com/)
 ## Features
 
 - Responsive Ready.
-- Powered by Bootstrap 4.
+- Powered by Vanilla JS.
 - Blog Support.
 - Well formatted code.
 - Easy Customization.
@@ -36,14 +36,6 @@ Checkout the live demo [here](https://apsho-hugo.staticmania.com/)
 - Forestry Integrated.
 - Crafted for Personal Portfolio
 
-## Support
-
-Have some question or facing any technical trouble feel free to [Contact Us](https://staticmania.com/contact/)
-
 ## Licensing
 
 This Repository is licensed under the [MIT](https://github.com/StaticMania/apsho/blob/master/LICENSE) License
-
-## Hire
-
-Need help to build HUGO websites with your custom requirements. Feel free to [contact](https://staticmania.com/contact/) with us. We provide custom development service for HUGO.

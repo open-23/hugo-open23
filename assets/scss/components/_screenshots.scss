@@ -116,7 +116,8 @@
       }
     }
 
-    .slick-dots {
+    // Swiper Pagination Styles (replaces Slick dots)
+    .swiper-pagination {
       position: absolute;
       bottom: -90px;
       @include mobile {
@@ -124,35 +125,23 @@
       }
     }
 
-    .slick-dots li {
-      display: inline-block;
-      margin: 0 5px;
-      width: unset;
-      height: unset;
-    }
-
-    .slick-dots li button {
+    .swiper-pagination-bullet {
       background: $primary-color;
-      text-indent: -999999999px;
       width: 15px;
       height: 7px;
-      outline: 0;
       border-radius: 2px;
       transition: 0.5s ease;
-      padding: 0;
       opacity: 0.3;
-      &::before {
-        content: none;
-      }
+      margin: 0 5px !important;
     }
 
-    .slick-dots li.slick-active button {
+    .swiper-pagination-bullet-active {
       background: $primary-color;
       width: 40px;
       opacity: 1;
     }
 
-    .slick-list {
+    .swiper-wrapper {
       @include mobile {
         overflow: visible;
       }
