@@ -44,4 +44,4 @@ Checkout the live demo [here](https://open23.de/)
 
 ## Licensing
 
-This Repository is licensed under the [MIT](https://github.com/StaticMania/hugo-open23/blob/master/LICENSE) License
+This Repository is licensed under the [MIT](https://github.com/open-23/hugo-open23/blob/main/LICENSE) License
