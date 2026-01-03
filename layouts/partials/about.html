@@ -7,6 +7,7 @@
           <div class="col-lg-10 mx-auto">
             <div class="section-title">
               <h2>{{ .title }}</h2>
+              <p>{{ .subTitle }}</p>
             </div>
           </div>
         </div>
@@ -53,6 +54,7 @@
                 <i class="{{ .icon }}"></i> {{ .title }}
               </a>
               {{ end }}
+              <!--
               <a href="#" data-text={{ .buttonText }} class="btn btn-primary">
                 <span>{{ .buttonText }}</span>
               </a>
@@ -71,7 +73,11 @@
               <p>
                 {{ .description2nd2 }}
               </p>
-              <!--
+              {{ range .secondSocial.links }}
+              <a href="{{ .url }}" target="_blank">
+                <i class="{{ .icon }}"></i> {{ .title }}
+              </a>
+              {{ end }}
               <div class="about-content-list">
                 <ul>
                   {{ $Section := .checkItem }}
