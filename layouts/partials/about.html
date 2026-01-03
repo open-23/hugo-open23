@@ -1,7 +1,14 @@
 {{ with .Site.Data.about }}
   {{ if .enable }}
-    <section class="about" id="about">
+    <section class="about" id="team">
       <div class="container">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="section-title">
+              <h2>{{ .title }}</h2>
+            </div>
+          </div>
+        </div>
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="about-image">
@@ -29,9 +36,9 @@
           </div>
           <div class="col-lg-6">
             <div class="about-content ml-25">
-              <h2>
-                {{ .title }}
-              </h2>
+              <h3>
+                {{ .firstName }}
+              </h3>
               <p>
                 {{ .description }}
               </p>
@@ -52,9 +59,9 @@
         <div class="row align-items-center">
           <div class="col-lg-6 order-2 order-lg-1">
             <div class="about-content mr-25">
-              <h2>
-                {{ .Title2nd }}
-              </h2>
+              <h3>
+                {{ .secondName }}
+              </h3>
               <p>
                 {{ .description2nd }}
               </p>
