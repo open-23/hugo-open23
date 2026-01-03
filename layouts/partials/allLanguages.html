@@ -1,9 +1,7 @@
 {{ if .IsTranslated }}
-<div class="account-list list-inline">
-	<div class="list-inline-item">
+	<nav class="LangNav">
 	{{ range .Translations }}
-		<a href="{{ .Permalink }}"><i class="fa-solid fa-language fa-lg" aria-label={{ .Language.LanguageName }}></i> {{ .Language.LanguageName }}</a>
+		<a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
 	{{ end}}
-	</div>
-</div>
+	</nav>
 {{ end }}
