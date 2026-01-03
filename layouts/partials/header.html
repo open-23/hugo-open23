@@ -1,7 +1,7 @@
 <nav class="main-nav navbar navbar-expand-lg">
   <div class="container-fluid">
     {{ "<!-- Logo -->" | safeHTML }}
-    <a href="/" class="navbar-brand" aria-label="Logo">
+    <a class="navbar-brand" href="{{ .Site.LanguagePrefix }}">
       <img
         class="logo-main"
         src="{{ .Site.Params.logo | absURL }}"
@@ -27,7 +27,7 @@
       <ul class="navbar-nav ml-auto">
       {{ range $index, $element := $menu }}
         <li class="nav-item">
-          <a href="{{ $.Site.LanguagePrefix }}{{ .URL }}" class="nav-link {{ if $.IsHome }}scroll{{ end }}" aria-label={{ .Name }}>{{ .Name }}</a>
+          <a href="{{ $.Site.LanguagePrefix }}{{ .URL }}" class="nav-link {{ if $.IsHome }}scroll{{ end }}">{{ .Name }}</a>
         </li>
       {{ end }}
       </ul>
