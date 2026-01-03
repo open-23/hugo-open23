@@ -1,8 +1,8 @@
 # MAIN base
-baseURL = "https://apsho-hugo.netlify.app/"
+baseURL = "https://open23.de/"
 languageCode = "en-us"
-title = "Apsho | App landing template"
-theme = "apsho"
+title = "Open23| App landing template"
+theme = "open23"
 
 # Navigation Bar
 [[menu.main]]

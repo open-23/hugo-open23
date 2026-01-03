@@ -1,7 +1,12 @@
-<h1>Apsho Hugo</h1>
-<img src="https://user-images.githubusercontent.com/36766798/107849133-5d1ca080-6e23-11eb-931a-7e5d1b720901.png" alt="screenshot" width="100%">
+# Open23 Hugo
 
-Apsho Hugo – App Landing Page is the perfect app showcase Hugo Theme. Apsho is a better way to present your modern business and app showcasing. It’s easy to customize and also well documented. And compatible with Desktop, laptop, mobile, and also compatible with major browsers. We follow the modern design system to craft the template.
+Open23 Hugo – App Landing Page is the perfect app showcase Hugo Theme. Open23
+is a better way to present your modern business and app showcasing. It’s easy
+to customize and also well documented. And compatible with Desktop, laptop,
+mobile, and also compatible with major browsers. We follow the modern design
+system to craft the template.
+
+The Open23 Hugo Theme is based on [Apsho](https://github.com/StaticMania/hugo-apsho)
 
 ## Table of Contents
 
@@ -18,12 +23,25 @@ Checkout the live demo [here](https://open23.de/)
 
 ## Installation
 
-1. Add the repository into your Hugo Project repository as a submodule, `git submodule add git@github.com:StaticMania/hugo-apsho.git themes/apsho`.
-2. Copy the  `data`, `content`, `static`, `resources` & `hugo.toml` files from the `exampleSite` directory and paste it on you Hugo Project repository/directory. From the site home directory:
+1. Add the repository into your Hugo Project repository as a submodule,
+   `git submodule add git@github.com:open-23/hugo-open23.git
+   themes/hugo-open23`.
 
-   cp -a themes/apsho/exampleSite/\* .
+2. Copy the  `data`, `content`, `static`, `resources` & `hugo.toml` files from
+   the `exampleSite` directory and paste it on you Hugo Project
+   repository/directory. From the site home directory:
 
-3. Build your site with `hugo serve` and see the result at `http://localhost:1313/`.
+   cp -a themes/hugo-open23/exampleSite/\* .
+
+3. Copy the `package.json` file and paste it on you Hugo Project
+   repository/directory:
+  
+  cp themes/hugo-open23/package.json .
+
+4. Build the javascript with `npm install && npm run build`
+
+3. Build your site with `hugo serve -D` and see the result at
+   `http://localhost:1313/`.
 
 ## Features
 
@@ -38,4 +56,4 @@ Checkout the live demo [here](https://open23.de/)
 
 ## Licensing
 
-This Repository is licensed under the [MIT](https://github.com/StaticMania/apsho/blob/master/LICENSE) License
+This Repository is licensed under the [MIT](https://github.com/open-23/hugo-open23/blob/main/LICENSE) License.
