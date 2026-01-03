@@ -1,6 +1,7 @@
 .about {
   position: relative;
   overflow: hidden;
+  padding: 80px 0 80px;
 
   @include desktop {
     text-align: center;
@@ -21,6 +22,9 @@
 
     img {
       max-width: 100%;
+      border: 1px solid #8C8C94;
+      border-radius: 12px;
+      box-shadow: 0px 20px 25px rgba(81, 82, 81, 0.496);
     }
 
     &-shape1 {
