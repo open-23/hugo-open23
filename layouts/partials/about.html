@@ -34,22 +34,14 @@
               <p>
                 {{ .description2 }}
               </p>
-<<<<<<< HEAD
               {{ range .firstSocial.links }}
               <a href="{{ .url }}" target="_blank">
                 <i class="{{ .icon }}"></i> {{ .title }}
               </a>
               {{ end }}
-              <!--
               <a href="#" data-text={{ .buttonText }} class="btn btn-primary">
                 <span>{{ .buttonText }}</span>
               </a>
-              !-->
-=======
-              <a href="#" data-text={{ .buttonText }} class="btn btn-primary">
-                <span>{{ .buttonText }}</span>
-              </a>
->>>>>>> 39e04d6 (rename feature into about)
             </div>
           </div>
         </div>
@@ -62,6 +54,7 @@
               <p>
                 {{ .description2nd }}
               </p>
+              <!--
               <div class="about-content-list">
                 <ul>
                   {{ $Section := .checkItem }}
@@ -73,6 +66,7 @@
                   {{ end }}
                 </ul>
               </div>
+              !-->
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2">
