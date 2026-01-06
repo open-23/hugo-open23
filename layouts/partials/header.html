@@ -12,8 +12,8 @@
     <button
       class="navbar-toggler collapsed"
       type="button"
-      data-toggle="collapse"
-      data-target="#mainNav"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
       aria-label="Navigation"
     >
       <span class="icon-bar"></span>
@@ -24,7 +24,7 @@
       {{ "<!-- Navigation Links -->" | safeHTML }}
       
       {{ $menu := .Site.Menus.main }}
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ms-auto">
       {{ range $index, $element := $menu }}
         <li class="nav-item">
           <a href="{{ $.Site.LanguagePrefix }}{{ .URL }}" class="nav-link {{ if $.IsHome }}scroll{{ end }}" aria-label={{ .Name }}>{{ .Name }}</a>

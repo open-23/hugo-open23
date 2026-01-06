@@ -1,14 +1,23 @@
-@import "variables";
+// 1. LOGIK (Funktionen müssen IMMER zuerst kommen)
+@import "bootstrap/scss/functions";
 
-@import 'plugins/bootstrap.min';
+// 2. DEINE DATEN (Variablen setzen)
+@import "variables"; 
 
-@import "typography";
+// 3. FRAMEWORK KERN (Bootstrap Variablen nutzen DEINE Werte via !default)
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
 
-@import "mixins";
+// 4. GENERIERUNG (Das eigentliche CSS wird gebaut)
+@import "bootstrap/scss/bootstrap";
 
-@import "buttons";
-
+// 5. DEIN DESIGN-LAYER (Feinschliff & Komponenten)
+@import "typography"; 
+@import "mixins";     
+@import "buttons";    
 @import "components/navigation";
-
 @import "components/hero";
-//@import "components/video";
+//@import "components/videos";

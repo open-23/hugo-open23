@@ -5,13 +5,13 @@
 
 export function initCollapses() {
   // Find all collapse triggers
-  const triggers = document.querySelectorAll('[data-toggle="collapse"]');
+  const triggers = document.querySelectorAll('[data-bs-toggle="collapse"]');
 
   triggers.forEach(trigger => {
     trigger.addEventListener('click', function(e) {
       e.preventDefault();
 
-      const targetSelector = this.getAttribute('data-target');
+      const targetSelector = this.getAttribute('data-bs-target');
       const target = document.querySelector(targetSelector);
 
       if (!target) return;
@@ -27,7 +27,7 @@ export function initCollapses() {
           siblings.forEach(sibling => {
             if (sibling !== target) {
               collapse(sibling);
-              const siblingTrigger = document.querySelector(`[data-target="#${sibling.id}"]`);
+              const siblingTrigger = document.querySelector(`[data-bs-target="#${sibling.id}"]`);
               if (siblingTrigger) {
                 siblingTrigger.classList.add('collapsed');
                 siblingTrigger.setAttribute('aria-expanded', 'false');

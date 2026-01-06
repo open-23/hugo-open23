@@ -1,50 +1,35 @@
+// 1. Font-Import bleibt hier (oder in die critical verschieben)
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700");
 
+// 2. Body-Styling
+// Farbe, Hintergrund und Font-Family kommen jetzt automatisch aus BS-Variablen.
+// Hier nur noch spezifische Ergänzungen:
 body {
-  font-family: $primary-font;
-  font-size: 16px;
-  color: $text-color;
-  background: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $text-color-dark;
-  font-family: $primary-font;
-  font-weight: 700;
+// 3. Überschriften
+// Größen und Gewichte kommen aus den Variablen.
+// Hier definieren wir nur das optische Feintuning:
+h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.5px;
   overflow-wrap: break-word;
+  // Bootstrap setzt standardmäßig margin-top: 0 und ein margin-bottom. 
+  // Falls du dein altes Margin behalten willst:
+  margin-bottom: 0.5rem; 
 }
 
+// 4. Fließtext
 p {
-  font-size: 16px;
-  color: $text-color;
-  line-height: 26px;
+  line-height: 26px; // Kann auch als $line-height-base in die Variablen
   overflow-wrap: break-word;
+  margin-bottom: 1.5rem;
 }
 
-h1 {
-  font-size: 65px;
-  line-height: 70px;
-}
-
-h2 {
-  font-size: 40px;
-  line-height: 55px;
-}
-
-h3 {
-  font-size: 28px;
-}
-
-h4 {
-  font-size: 23px;
-}
-
-h5 {
-  font-size: 20px;
+// 5. Spezielle Anpassungen (falls nötig)
+// Hier kannst du Dinge definieren, die BS nicht abdeckt:
+.text-hero {
+  font-weight: 700;
+  // nutzt die Variable, falls du sie im Hero brauchst
 }
