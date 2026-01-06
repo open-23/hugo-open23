@@ -1,20 +1,115 @@
-// Fokus auf BS5 Form-Styles
-.form-control {
-  min-height: 52px;
-  background: rgba($border-color, 0.5);
-  border: 1px solid transparent; // BS5 braucht eine Border-Definition
-  
-  &:focus {
-    color: $text-color-dark;
-    background-color: $white;
-    border-color: $primary;
-    box-shadow: 0 0 0 0.25rem rgba($primary, 0.1); // Typischer BS5 Fokus-Ring
+a {
+  color: $primary-color;
+  text-decoration: none;
+  &:hover {
+    color: $primary-color;
+    border-color: $primary-color;
+    text-decoration: underline;
   }
 }
 
-// Breaking Change: Negative Margins für Overlays
-.page-content-wrapper {
-  margin-top: -150px; // Funktioniert jetzt, da $enable-negative-margins: true
-  z-index: 2;
-  position: relative;
+.section {
+  &-title {
+    text-align: center;
+    margin-bottom: 50px;
+    @include mobile {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 45px;
+      @include tablet {
+        font-size: 35px;
+        line-height: 44px;
+      }
+      @include mobile {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+
+.ms-25 { 
+  margin-inline-start: 25px;
+
+  @include desktop {
+    margin-inline-start: 0px;
+  }
+}
+
+.me-25 {
+  margin-inline-end: 25px;
+
+  @include desktop {
+    margin-inline-end: 0px;
+  }
+}
+
+.form-control {
+  min-height: 52px;
+  margin-bottom: 30px;
+  padding: 15px 20px;
+  font-size: 15px;
+  background: rgba($color: $border-color, $alpha: 0.5); 
+  border-radius: 4px;
+  border-color: transparent;
+  transition: 0.3s ease;
+  
+  &:focus {
+    box-shadow: none;
+    border-color: $primary-color;
+    box-shadow: 0px 5px 25px rgba(25, 24, 29, 0.06);
+  }
+}
+
+.page {
+  &-header {
+    padding: 130px 0 200px;
+    background-color: $white;
+    text-align: center;
+    margin: 130px 100px 0;
+    background: $secondary-color-transparent; 
+    border-radius: 50px;
+    
+    @include desktop-xl {
+      margin: 130px 50px 0;
+    }
+    @include desktop {
+      margin: 130px 30px 0;
+      border-radius: 25px;
+      padding: 80px 0 180px;
+    }
+    @include mobile {
+      margin: 100px 15px 0;
+      padding: 50px 0 120px;
+    }
+    
+    h1 {
+      @include desktop {
+        font-size: 26px;
+      }
+      margin-bottom: 20px;
+    }
+    
+    h2 {
+      font-size: 40px;
+      line-height: 52px;
+      @include mobile {
+        font-size: 30px;
+        line-height: 42px;
+      }
+    }
+  }
+  
+  &-content {
+    padding: 10px 50px 30px;
+    &-wrapper {
+      padding: 40px 35px;
+      background-color: white;
+      border-radius: 10px;
+      margin-top: -150px;
+      box-shadow: 0px 5px 25px rgba(25, 24, 29, 0.06);
+    }
+  }
 }
