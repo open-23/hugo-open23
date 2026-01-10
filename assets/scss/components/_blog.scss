@@ -1,23 +1,23 @@
 .blog {
-  margin-top: -150px;
-  padding-bottom: 100px;
+  margin-block-start: -150px;
+  padding-block-end: 100px;
   @include mobile {
-    margin-top: -100px;
+    margin-block-start: -100px;
   }
   &-post {
-    padding-bottom: 100px;
+    padding-block-end: 100px;
     @include mobile {
-      padding-bottom: 50px;
+      padding-block-end: 50px;
     }
     &-item {
       background-color: $white;
       box-shadow: 0px 20px 25px rgba(67, 103, 90, 0.1);
       border-radius: 10px;
-      margin-bottom: 50px;
+      margin-block-end: 50px;
       padding: 15px 15px 20px;
       transition: 0.3s ease;
 
-      // CSS Flexbox for equal height (replaces matchHeight.js)
+      // CSS Flexbox for equal height (BS5 natively)
       display: flex;
       flex-direction: column;
       height: 100%;
@@ -26,7 +26,7 @@
         transform: scale(1.02);
       }
       @include desktop {
-        margin-bottom: 30px;
+        margin-block-end: 30px;
       }
     }
     &-thumb {
@@ -34,18 +34,18 @@
         width: 100%;
         border-radius: 10px;
       }
-      margin-bottom: 18px;
+      margin-block-end: 18px;
     }
     &-content {
-      padding: 0 8px;
+      padding-inline: 8px;
       display: flex;
       flex-direction: column;
-      flex: 1; // Takes remaining space
-      justify-content: space-between; // Pushes post-author to bottom
+      flex: 1;
+      justify-content: space-between;
 
       h2 {
         line-height: 28px;
-        margin-bottom: 10px;
+        margin-block-end: 10px;
         a {
           font-size: 20px;
           font-weight: 600;
@@ -62,13 +62,13 @@
       .post-author {
         display: flex;
         align-items: center;
-        margin-top: auto; // Pushes to bottom
+        margin-block-start: auto;
         .thumb {
           width: 46px;
           height: 46px;
           border-radius: 50%;
           overflow: hidden;
-          margin-right: 15px;
+          margin-inline-end: 15px;
           img {
             width: 100%;
           }
@@ -76,27 +76,27 @@
         .meta {
           h3 {
             font-size: 15px;
-            margin-bottom: 0;
+            margin-block-end: 0;
             font-weight: 600;
           }
           p {
-            margin-bottom: 0;
+            margin-block-end: 0;
             font-size: 14px;
           }
         }
       }
     }
     .see-all-post {
-      margin-top: 40px;
+      margin-block-start: 40px;
       text-align: center;
-      margin: 0 auto;
+      margin-inline: auto;
     }
   }
   &-pagination {
     display: flex;
     justify-content: center;
     overflow: hidden;
-    margin-top: 30px;
+    margin-block-start: 30px;
     ul {
       padding: 0;
       margin: 0;
@@ -114,7 +114,7 @@
           border-radius: 4px;
           border: none;
           color: $text-color-dark;
-          margin-right: 20px;
+          margin-inline-end: 20px;
           background-color: rgba($color: $primary-color, $alpha: 0.1);
           transition: all 0.3s ease-in-out;
           z-index: 99;
@@ -123,7 +123,7 @@
             width: 60px;
             height: 60px;
             font-size: 25px;
-            margin-right: 15px;
+            margin-inline-end: 15px;
           }
           &:hover {
             background: $primary-color;
@@ -139,14 +139,13 @@
   }
   &-single {
     position: relative;
-    margin-top: -150px;
-    margin-bottom: 50px;
+    margin-block: -150px 50px;
     border-radius: 10px;
     @include mobile {
-      margin-top: -100px;
+      margin-block-start: -100px;
     }
     &-post {
-      padding: 50px 40px 50px;
+      padding: 50px 40px;
       background-color: $white;
       box-shadow: 0px 5px 25px rgba(25, 24, 29, 0.1);
       border-radius: 20px;
@@ -155,12 +154,13 @@
       }
       img {
         max-width: 100%;
-        margin-bottom: 30px;
+        margin-block-end: 30px;
         border-radius: 20px;
       }
       .post-title {
         width: 90%;
-        margin: 0 auto 30px;
+        margin-block: 0 30px;
+        margin-inline: auto;
         font-size: 35px;
         @include desktop {
           font-size: 30px;
@@ -172,30 +172,30 @@
         font-size: 30px;
         line-height: 50px;
         text-align: center;
-        margin-bottom: 20px;
+        margin-block-end: 20px;
         @include desktop {
           font-size: 25px;
           line-height: 40px;
         }
       }
       p {
-        margin-bottom: 30px;
+        margin-block-end: 30px;
         &:last-child {
-          margin-bottom: 0;
+          margin-block-end: 0;
         }
       }
       ul {
-        padding: 0 0 0 20px;
-        margin: 0 0 40px;
+        padding-inline: 0 20px;
+        margin-block: 0 40px;
         li {
           list-style: none;
           display: block;
           position: relative;
           line-height: 28px;
           font-size: 18px;
-          padding-left: 30px;
+          padding-inline-start: 30px;
           width: 65%;
-          margin-bottom: 20px;
+          margin-block-end: 20px;
           @include tablet {
             width: 100%;
           }
@@ -206,8 +206,8 @@
             width: 12px;
             height: 12px;
             border-radius: 4px;
-            left: 0;
-            top: 50%;
+            inset-inline-start: 0;
+            inset-block-start: 50%;
             transform: translateY(-50%);
           }
         }
@@ -215,12 +215,13 @@
     }
     &-header {
       .post-meta {
-        margin: 50px auto 0;
+        margin-block: 50px 0;
+        margin-inline: auto;
         @include mobile {
-          margin-top: 25px;
+          margin-block-start: 25px;
         }
         ul {
-          margin: 0 auto;
+          margin-inline: auto;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -229,7 +230,7 @@
           li {
             color: $text-color-dark;
             &:not(:last-child) {
-              margin-right: 30px;
+              margin-inline-end: 30px;
             }
             img {
               width: 50px;

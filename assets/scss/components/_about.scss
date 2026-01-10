@@ -1,15 +1,15 @@
 .about {
   position: relative;
   overflow: hidden;
-  padding: 80px 0 160px;
+  padding-block: 80px 160px;
 
   @include desktop {
     text-align: center;
-    padding-bottom: 60px;
+    padding-block-end: 60px;
   }
 
   &-title {
-    margin-bottom: 110px;
+    margin-block-end: 110px;
   }
 
   &-image {
@@ -26,46 +26,46 @@
 
     img {
       max-width: 80%;
-      border-radius: 11px;
+      border-radius: 10px;
     }
 
     &-shape1 {
       @include desktop {
-        left: -13% !important;
+        inset-inline-start: -13% !important;
       }
 
       @include tablet {
-        left: -17% !important;
+        inset-inline-start: -17% !important;
       }
     }
 
     &-shape2 {
       @include desktop {
-        right: 5% !important;
+        inset-inline-end: 5% !important;
       }
 
       @include tablet {
-        right: -10% !important;
+        inset-inline-end: -10% !important;
       }
     }
 
     &-shape3 {
       @include desktop {
-        right: -7% !important;
+        inset-inline-end: -7% !important;
       }
 
       @include tablet {
-        right: -9% !important;
+        inset-inline-end: -9% !important;
       }
     }
 
     &-shape4 {
       @include desktop {
-        left: -5% !important;
+        inset-inline-start: -5% !important;
       }
 
       @include tablet {
-        left: -15% !important;
+        inset-inline-start: -15% !important;
       }
     }
   }
@@ -73,14 +73,12 @@
 &-content {
     @include desktop {
       text-align: center;
-      margin-bottom: 30px;
-      padding: 50px 0 0;
+      margin-block-end: 30px;
+      padding-block-start: 50px;
     }
 
     h2 {
-      margin-bottom: 30px;
-      // Entferne harte Font-Size, BS5 nutzt jetzt $h2-font-size (40px)
-      // Das Tablet-Media-Query kann bleiben, wenn es explizit kleiner sein soll:
+      margin-block-end: 30px;
       @include tablet {
         font-size: 35px;
         line-height: 40px;
@@ -88,18 +86,16 @@
     }
 
     h3 {
-      color: $primary; // Nutzt jetzt die BS-Mapping Variable
+      color: $primary;
     }
 
     p {
       font-weight: 400;
-      // Entferne font-size: 16px und line-height: 28px, 
-      // da dies nun global über $font-size-base und $line-height-base kommt
-      margin-bottom: 30px;
+      margin-block-end: 30px;
     }
-    
+
     &-list {
-      margin-top: 50px;
+      margin-block-start: 50px;
 
       @include desktop {
         display: flex;
@@ -115,7 +111,7 @@
           display: flex;
           align-items: center;
           &:not(:last-child) {
-            margin-bottom: 15px;
+            margin-block-end: 15px;
           }
 
           i {
@@ -125,7 +121,7 @@
             line-height: 20px;
             border: 2px solid $primary-color;
             border-radius: 5px;
-            margin-right: 15px;
+            margin-inline-end: 15px;
             color: $primary-color;
             display: inline-block;
             font-size: 12px;
@@ -134,7 +130,7 @@
 
           p {
             font-weight: 500;
-            margin-bottom: 0;
+            margin-block-end: 0;
             display: inline-block;
             color: $text-color-dark;
             @include desktop-lg {
@@ -150,7 +146,7 @@
   }
 
   .row.align-items-center {
-    padding: 10px 0 65px;
+    padding-block: 10px 65px;
   }
 
 }

@@ -1,18 +1,18 @@
 .footer {
   position: relative;
-  padding: 120px 0 100px;
+  padding-block: 120px 100px;
   overflow: hidden;
   background: url(../images/footer/footer-transparent-bg.svg);
   background-position: top center;
   background-size: cover;
   @include mobile {
-   padding: 120px 0 50px;
+   padding-block: 120px 50px;
   }
   &-subscribe {
     &-title {
       h2 {
         text-align: center;
-        margin: 0px 0 60px;
+        margin-block: 0 60px;
         @include tablet {
           font-size: 35px;
         }
@@ -25,11 +25,11 @@
       text-align: center;
     }
     @include mobile {
-      margin-bottom: 30px;
+      margin-block-end: 30px;
     }
 
     img {
-      margin-bottom: 20px;
+      margin-block-end: 20px;
       width: 40%;
     }
 
@@ -51,7 +51,7 @@
         display: inline-block;
 
         &:not(:last-child) {
-          margin-right: 10px;
+          margin-inline-end: 10px;
         }
 
         a {
@@ -71,20 +71,20 @@
   .footer-widget {
     @include tablet {
       text-align: center;
-      padding-top: 20px;
+      padding-block-start: 20px;
     }
 
     h4 {
       font-size: 22px;
       font-weight: 600;
-      margin-bottom: 20px;
+      margin-block-end: 20px;
       @include mobile {
         font-size: 17px;
       }
     }
 
     &-list {
-      text-align: left;
+      text-align: start;
 
       @include tablet {
         text-align: center;
@@ -100,8 +100,8 @@
             color: $text-color;
             text-decoration: none;
             display: block;
-            transition: all.5s ease-in-out;
-            padding: 10px 0;
+            transition: all 0.5s ease-in-out;
+            padding-block: 10px;
             @include mobile {
               font-size: 15px;
             }
@@ -112,7 +112,7 @@
           }
 
           i {
-            padding-right: 10px;
+            padding-inline-end: 10px;
           }
         }
       }

@@ -1,25 +1,25 @@
 .hero {
   position: relative;
-  padding: 150px 0 80px;
+  padding-block: 150px 80px;
   overflow: hidden;
   @include desktop {
     text-align: center;
   }
   @include tablet {
-    padding: 120px 0 80px;
+    padding-block: 120px 80px;
   }
   @include mobile {
-    padding: 100px 0 50px;
+    padding-block: 100px 50px;
   }
   &-shape {
     position: absolute;
     width: 100%;
-    top: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     svg {
       position: absolute;
-      top: 0;
-      right: 0;
+      inset-block-start: 0;
+      inset-inline-end: 0;
       width: 65%;
     }
   }
@@ -30,13 +30,13 @@
       font-weight: 400;
       color: $primary-color;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-block-end: 10px;
       display: inline-block;
       letter-spacing: 3px;
     }
 
     h1 {
-      margin-bottom: 25px;
+      margin-block-end: 25px;
       @include tablet {
         font-size: 50px;
         line-height: 52px;
@@ -47,7 +47,7 @@
       font-size: 17px;
       line-height: 37px;
       font-weight: 400;
-      margin-bottom: 40px;
+      margin-block-end: 40px;
       @include mobile {
         font-size: 16px;
         line-height: 28px;
@@ -55,7 +55,7 @@
     }
 
     &-buttons {
-      padding-left: 0;
+      padding-inline-start: 0;
       margin: 0;
       list-style: none;
 
@@ -63,10 +63,10 @@
         display: inline-block;
 
         &:not(:last-child) {
-          margin-right: 15px;
+          margin-inline-end: 15px;
           @include mobile {
-            margin-right: 0;
-            margin-bottom: 20px;
+            margin-inline-end: 0;
+            margin-block-end: 20px;
           }
         }
         @include mobile {
@@ -81,10 +81,11 @@
     img {
       max-width: 120%;
       max-height: 120%;
-      padding-bottom: 19%;
+      padding-block-end: 19%;
     }
     @include desktop {
-      margin: 0 auto 40px;
+      margin-block: 0 40px;
+      margin-inline: auto;
       width: 70%;
     }
     @include tablet {
@@ -92,14 +93,14 @@
     }
     @include mobile {
       width: 100%;
-      margin-bottom: 20px;
+      margin-block-end: 20px;
     }
   }
 
   &-svg-icon {
     position: absolute;
-    top: 0px;
-    right: -505px;
+    inset-block-start: 0;
+    inset-inline-end: -505px;
     width: 99%;
 
     svg {

@@ -1,15 +1,15 @@
 .faq {
-  padding: 100px 0;
+  padding-block: 100px;
   @include tablet {
-    padding: 50px 0;
+    padding-block: 50px;
   }
   &-content {
     @include desktop {
       text-align: center;
-      margin-bottom: 30px;
+      margin-block-end: 30px;
     }
     h2 {
-      margin-bottom: 25px;
+      margin-block-end: 25px;
 
       @include tablet {
         font-size: 30px;
@@ -35,7 +35,7 @@
   &-accordion {
     border-radius: 10px;
     &-item {
-      margin-bottom: 25px;
+      margin-block-end: 25px;
       border-radius: 6px;
       position: relative;
       z-index: 1;
@@ -52,14 +52,14 @@
             height: 24px;
             border-radius: 4px;
             background-color: rgba($color: $primary-color, $alpha: 0.1);
-            right: 0;
-            top: 50%;
+            inset-inline-end: 0;
+            inset-block-start: 50%;
             transform: translateY(-50%);
           }
           .btn {
             display: block;
             width: 100%;
-            text-align: left;
+            text-align: start;
             padding: 0;
             font-size: 18px;
             font-weight: 600;
@@ -68,6 +68,8 @@
             white-space: unset;
             position: relative;
             letter-spacing: 0;
+            border: 0;
+            background: transparent;
             @include mobile {
               font-size: 16px;
             }
@@ -77,8 +79,8 @@
               position: absolute;
               width: 10px;
               height: 2px;
-              top: 50%;
-              right: 6.5px;
+              inset-block-start: 50%;
+              inset-inline-end: 6.5px;
               background: $primary-color;
               transform: translateY(-50%) rotate(0);
               transition: transform 0.5s ease;
@@ -95,7 +97,7 @@
         color: $text-color;
         font-size: 15px;
         line-height: 25px;
-        padding: 20px 0 10px;
+        padding-block: 20px 10px;
         @include mobile {
           font-size: 14px;
           line-height: 22px;
