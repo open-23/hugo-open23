@@ -7,12 +7,10 @@ import { initScreenshotsSlider, initTestimonialSlider } from './modules/sliders.
 import { initLightbox } from './modules/lightbox.js';
 import { initHeadroom } from './modules/headroom.js';
 import { initSmoothScroll } from './modules/smooth-scroll.js';
-import { initStickyNav } from './modules/sticky-nav.js';
 
 function init() {
   initCollapses();
   initHeadroom();
-  initStickyNav();
   initSmoothScroll();
   initLightbox();
   initScreenshotsSlider();
