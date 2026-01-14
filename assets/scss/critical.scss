@@ -1,23 +1,10 @@
-// 1. LOGIK (function first)
-@import "bootstrap/scss/functions";
+// 1. FRAMEWORK CORE (now optimized)
+// This file now contains all necessary Bootstrap modules and our custom variables.
+@import "custom-bootstrap";
 
-// 2. Own variables and values
-@import "variables"; 
-@import "mixins";
-
-// 3. FRAMEWORK CORE
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/variables-dark";
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/utilities";
-
-// 4. GENERATE BOOTSTRAP 
-@import "bootstrap/scss/bootstrap";
-
-// 5. OWN CUSTOMUZE DESIGN
+// 2. OWN CUSTOMIZE DESIGN (critical components)
+// These are the styles for the "above-the-fold" content.
 @import "typography";    
 @import "buttons";    
 @import "components/navigation";
 @import "components/hero";
-//@import "components/videos";

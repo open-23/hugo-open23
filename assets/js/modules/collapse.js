@@ -1,5 +1,18 @@
 /**
- * Navigation & Collapse Module
+ * @file This file contains a custom implementation of the Bootstrap collapse component.
+ * @module assets/js/modules/collapse
+ *
+ * @description This module handles the functionality for navigation and collapse elements on the page,
+ * including navbar toggles, FAQ accordions, auto-closing mobile menus, and sticky navigation.
+ *
+ * @note This is a custom implementation of the Bootstrap collapse functionality.
+ * For better maintainability, accessibility, and compatibility, it is recommended
+ * to replace this with the official Bootstrap Collapse plugin. The project already includes
+ * Bootstrap's JS dependencies, so you can leverage the native plugin without adding
+ * extra weight, especially with modern tree-shaking bundlers.
+ * The `data-parent` attribute logic is also custom here; the native BS5 equivalent
+ * is `data-bs-parent`.
+ *
  * Handles: Navbar Toggles, FAQ Accordion, Auto-Close on Link-Click, and Sticky-State
  */
 

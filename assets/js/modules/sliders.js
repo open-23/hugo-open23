@@ -77,20 +77,8 @@ export function initTestimonialSlider() {
     slideToClickedSlide: true,
   });
 
-  // Add opacity effect for non-active slides
-  swiper.on('slideChange', () => {
-    const slides = container.querySelectorAll('.swiper-slide');
-    slides.forEach((slide, index) => {
-      if (index === swiper.activeIndex) {
-        slide.style.opacity = '1';
-      } else {
-        slide.style.opacity = '0.5';
-      }
-    });
-  });
-
-  // Initial opacity
-  swiper.emit('slideChange');
+  // The opacity effect is handled by the SCSS file _testimonial.scss
+  // The styles for .swiper-slide and .swiper-slide-active handle the opacity
 }
 
 /**

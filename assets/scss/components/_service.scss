@@ -11,7 +11,7 @@
           svg {
             path {
               &:first-child {
-                fill: #ffecee;
+                fill: $service-icon-bg-1;
               }
             }
           }
@@ -27,7 +27,7 @@
           svg {
             path {
               &:first-child {
-                fill: #e8f1ff;
+                fill: $service-icon-bg-2;
               }
             }
           }
@@ -43,7 +43,7 @@
           svg {
             path {
               &:first-child {
-                fill: #fff7d8;
+                fill: $service-icon-bg-3;
               }
             }
           }

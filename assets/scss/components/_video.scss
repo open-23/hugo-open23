@@ -1,5 +1,5 @@
 .video {
-  background: #f9f2ea;
+  background: $video-bg;
   padding-block-end: 100px;
   position: relative;
   border-radius: 50px;
@@ -46,7 +46,7 @@
     position: absolute;
     border: 2px solid white;
     border-radius: 50%;
-    background: #fff;
+    background: $white;
     z-index: 1;
     width: 90px;
     height: 90px;
@@ -65,7 +65,7 @@
     }
 
     i {
-      color: red;
+      color: $danger-color;
       position: absolute;
       text-align: center;
       inset-block-start: 50%;
@@ -147,7 +147,9 @@
     }
 
     &-buttons {
-      @extend .hero-content-buttons;
+      // @extend .hero-content-buttons; was removed because the class is not defined anywhere in the project
+      // This seems to be a leftover from a previous version of the theme.
+      // The buttons are styled with the .btn-platform class in _buttons.scss
     }
   }
 }
