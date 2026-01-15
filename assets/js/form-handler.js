@@ -1,41 +1,49 @@
-window.addEventListener("DOMContentLoaded", function () {
-  var form = document.getElementById("contact-form");
-  var button = document.getElementById("contact-form-button");
-  var status = document.getElementById("contact-form-status");
+window.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+  const button = document.getElementById("contact-form-button");
+  const status = document.getElementById("contact-form-status");
 
-  function success() {
+  if (!form || !button || !status) {
+    return;
+  }
+
+  const handleSuccess = () => {
     form.reset();
-    button.style = "display: none";
-    status.innerHTML = "Thanks! Contact form is submitted successfully.";
-  }
-
-  function error() {
-    status.innerHTML = "Oops! There was a problem.";
-  }
-
-  // handle the form submission event
-  if (form != null) {
-    form.addEventListener("submit", function (ev) {
-      ev.preventDefault();
-      var data = new FormData(form);
-      ajax(form.method, form.action, data, success, error);
-    });
-  }
-});
-
-// helper function for sending an AJAX request
-
-function ajax(method, url, data, success, error) {
-  var xhr = new XMLHttpRequest();
-  xhr.open(method, url);
-  xhr.setRequestHeader("Accept", "application/json");
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState !== XMLHttpRequest.DONE) return;
-    if (xhr.status === 200) {
-      success(xhr.response, xhr.responseType);
-    } else {
-      error(xhr.status, xhr.response, xhr.responseType);
-    }
+    button.style.display = "none";
+    status.innerHTML = "Thanks! Your message has been sent successfully.";
+    status.className = 'contact-form-status success';
   };
-  xhr.send(data);
-}
+
+  const handleError = (errorMsg) => {
+    status.innerHTML = `Oops! There was a problem. ${errorMsg || ''}`;
+    status.className = 'contact-form-status error';
+  };
+
+  form.addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    const data = new FormData(form);
+    
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        handleSuccess();
+      } else {
+        const responseData = await response.json();
+        if (Object.prototype.hasOwnProperty.call(responseData, 'errors')) {
+          handleError(responseData.errors.map(error => error.message).join(", "));
+        } else {
+          handleError('An unknown error occurred.');
+        }
+      }
+    } catch (error) {
+      handleError('Please check your internet connection.');
+    }
+  });
+});

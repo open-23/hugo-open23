@@ -1,7 +1,7 @@
 <nav class="main-nav navbar navbar-expand-lg">
   <div class="container-fluid">
     {{ "<!-- Logo -->" | safeHTML }}
-    <a href="/" class="navbar-brand" aria-label="Logo">
+    <a href="/" class="navbar-brand" aria-label="Logo" data-bs-target="#mainNav" data-bs-dismiss="collapse">
       <img
         class="logo-main"
         src="{{ .Site.Params.logo | absURL }}"
@@ -12,8 +12,8 @@
     <button
       class="navbar-toggler collapsed"
       type="button"
-      data-toggle="collapse"
-      data-target="#mainNav"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
       aria-label="Navigation"
     >
       <span class="icon-bar"></span>
@@ -24,10 +24,10 @@
       {{ "<!-- Navigation Links -->" | safeHTML }}
       
       {{ $menu := .Site.Menus.main }}
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ms-auto">
       {{ range $index, $element := $menu }}
         <li class="nav-item">
-          <a href="{{ $.Site.LanguagePrefix }}{{ .URL }}" class="nav-link {{ if $.IsHome }}scroll{{ end }}" aria-label={{ .Name }}>{{ .Name }}</a>
+          <a href="{{ $.Site.LanguagePrefix }}{{ .URL }}" class="nav-link {{ if $.IsHome }}scroll{{ end }}" aria-label={{ .Name }} data-bs-target="#mainNav" data-bs-dismiss="collapse">{{ .Name }}</a>
         </li>
       {{ end }}
       </ul>

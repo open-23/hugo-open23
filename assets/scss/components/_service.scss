@@ -1,8 +1,8 @@
 .service {
-  padding: 40px 0 80px;
+  padding-block: 40px 80px;
 
   @include mobile-xs {
-    padding-bottom: 0;
+    padding-block-end: 0;
   }
   .col-md-6 {
     &:nth-child(3n - 2) {
@@ -11,7 +11,7 @@
           svg {
             path {
               &:first-child {
-                fill: #ffecee;
+                fill: $service-icon-bg-1;
               }
             }
           }
@@ -27,7 +27,7 @@
           svg {
             path {
               &:first-child {
-                fill: #e8f1ff;
+                fill: $service-icon-bg-2;
               }
             }
           }
@@ -43,7 +43,7 @@
           svg {
             path {
               &:first-child {
-                fill: #fff7d8;
+                fill: $service-icon-bg-3;
               }
             }
           }
@@ -57,16 +57,14 @@
   &-item {
     position: relative;
     background: $white;
-    background: #fff;
     box-shadow: 0px 20px 25px rgba(67, 103, 90, 0.1);
-    margin-bottom: 20px;
-    margin-top: 10px;
+    margin-block: 10px 20px;
     border-radius: 10px;
     padding: 25px 20px 40px;
     transition: transform 0.3s $site-ease;
     overflow: hidden;
 
-    // CSS Flexbox for equal height (replaces matchHeight.js)
+    // CSS Flexbox for equal height (BS5 natively)
     display: flex;
     flex-direction: column;
     height: 90%;
@@ -76,8 +74,8 @@
       content: "";
       width: 100%;
       height: 3px;
-      left: 0;
-      bottom: 0;
+      inset-inline-start: 0;
+      inset-block-end: 0;
       z-index: 1;
       transform: scaleX(0);
       transition: transform 0.5s $site-ease;
@@ -102,14 +100,14 @@
       position: absolute;
       height: 100%;
       width: auto;
-      left: 50%;
+      inset-inline-start: 50%;
       transform: translateX(-50%);
     }
 
     i {
       position: relative;
-      left: 50%;
-      top: 50%;
+      inset-inline-start: 50%;
+      inset-block-start: 50%;
       transform: translate(-50%, -50%);
       font-size: 40px;
       color: $black-grey;
@@ -121,30 +119,29 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    flex: 1; // Takes remaining space
+    flex: 1;
 
     img {
       width: 45%;
-      padding-top: 20px;
+      padding-block-start: 20px;
     }
 
     h4 {
-      margin-top: 20px;
+      margin-block-start: 20px;
       font-size: 22px;
       font-weight: 600;
       color: $primary-color;
     }
 
     h5 {
-      margin-top: 5px;
-      margin-bottom: 30px;
+      margin-block: 5px 30px;
     }
 
     p {
       font-size: 16px;
       line-height: 28px;
-      margin-bottom: 0;
-      flex: 1; // Description fills available space
+      margin-block-end: 0;
+      flex: 1;
     }
   }
 }

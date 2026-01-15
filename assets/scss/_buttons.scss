@@ -1,4 +1,5 @@
 .btn {
+  // basic values
   font-size: 15px;
   padding: 18px 50px;
   border-radius: 10px;
@@ -13,15 +14,26 @@
 }
 
 .btn-primary {
+  // Bootstrap 5 using local variables
+  // new new defintion for our own desing
+  --bs-btn-color: #{$primary-color};
+  --bs-btn-bg: #{$white};
+  --bs-btn-border-color: #{$primary-color};
+  --bs-btn-hover-color: #{$primary-color};
+  --bs-btn-hover-bg: #{$white};
+  --bs-btn-hover-border-color: #{$primary-color};
+
   position: relative;
-  border: 2px solid $primary-color;
-  color: $primary-color;
   text-transform: uppercase;
-  background: $white;
+  background-color: var(--bs-btn-bg);
+  color: var(--bs-btn-color);
+  border: 2px solid var(--bs-btn-border-color);
+  overflow: hidden;
 
   span {
     display: block;
     position: relative;
+    z-index: 2;
     transition: 0.9s $site-ease;
   }
 
@@ -37,6 +49,7 @@
     transform: scaleY(0);
     transform-origin: bottom center;
     transition: 0.5s $site-ease;
+    z-index: 1;
   }
 
   &::after {
@@ -49,13 +62,11 @@
     transform: translate(-50%, calc(-50% - 10px));
     opacity: 0;
     transition: 0.9s $site-ease;
+    z-index: 3;
   }
 
   &:hover {
-    color: $primary-color;
-    border-color: $primary-color;
-    background: $white;
-
+    // Hover-Logik aus deinem Theme
     span {
       transform: translateY(10px);
       opacity: 0;
@@ -80,6 +91,7 @@
   border-radius: 10px;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
+  background: transparent;
 
   @include desktop-lg {
     padding: 15px 30px;
@@ -88,15 +100,13 @@
     justify-content: center;
   }
 
-  i {
-    svg {
-      fill: $black-grey;
-      transition: all 0.3s ease-in-out;
-    }
+  i svg {
+    fill: $black-grey;
+    transition: all 0.3s ease-in-out;
   }
 
   &-area {
-    margin-left: 12px;
+    margin-inline-start: 12px;
     color: $black-grey;
     font-size: 18px;
     transition: all 0.3s ease-in-out;
@@ -122,18 +132,15 @@
     text-decoration: none;
     background-color: $primary-color;
     border-color: $primary-color;
-    box-shadow: 0px 8px 20px rgba(254, 115, 128, 0.3);
+    box-shadow: 0px 8px 20px rgba(106, 13, 173, 0.3); // Farbe auf lila angepasst
     transform: scale(1.05);
 
-    i {
-      svg {
-        fill: $white;
-      }
+    i svg {
+      fill: $white;
     }
 
     .btn-platform-area {
       color: $white;
-
       span {
         color: $white;
       }
@@ -147,10 +154,13 @@
   font-weight: 500;
   font-size: 14px;
   font-family: $primary-font;
-  box-shadow: 0px 8px 20px rgba(255, 115, 128, 0.3);
+  box-shadow: 0px 8px 20px rgba(106, 13, 173, 0.3);
   transition: 0.3s $site-ease;
   text-transform: uppercase;
+  border: none;
+
   &:hover {
     transform: scale(1.04);
+    color: $white;
   }
 }

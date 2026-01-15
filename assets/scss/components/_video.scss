@@ -1,37 +1,44 @@
 .video {
-  background: #f9f2ea;
-  padding-bottom: 100px;
+  background: $video-bg;
+  padding-block-end: 100px;
   position: relative;
   border-radius: 50px;
-  margin: 200px 80px 0;
+  margin-block-start: 200px;
+  margin-inline: 80px;
   @include desktop-xl {
-    margin: 200px 50px 0;
+    margin-block-start: 200px;
+    margin-inline: 50px;
   }
   @include desktop-lg {
-    margin: 200px 30px 0;
+    margin-block-start: 200px;
+    margin-inline: 30px;
   }
   @include desktop {
-    margin: 100px 30px 0;
+    margin-block-start: 100px;
+    margin-inline: 30px;
     border-radius: 25px;
   }
   @include tablet {
-    padding-bottom: 50px;
-    margin: 70px 30px 0;
+    padding-block-end: 50px;
+    margin-block-start: 70px;
+    margin-inline: 30px;
   }
 
   &-iframe {
-    margin-top: -200px;
+    margin-block-start: -200px;
     position: relative;
     img {
       width: 100%;
     }
     @include desktop {
       width: 80%;
-      margin: -100px auto 0;
+      margin-block-start: -100px;
+      margin-inline: auto;
     }
     @include tablet {
       width: 90%;
-      margin: -70px auto 0;
+      margin-block-start: -70px;
+      margin-inline: auto;
     }
   }
 
@@ -39,12 +46,12 @@
     position: absolute;
     border: 2px solid white;
     border-radius: 50%;
-    background: #fff;
+    background: $white;
     z-index: 1;
     width: 90px;
     height: 90px;
-    top: 50%;
-    left: 50%;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
     transform: translate(-50%, -50%);
 
     @include tablet {
@@ -58,11 +65,11 @@
     }
 
     i {
-      color: red;
+      color: $danger-color;
       position: absolute;
       text-align: center;
-      top: 50%;
-      left: 50%;
+      inset-block-start: 50%;
+      inset-inline-start: 50%;
       font-size: 30px;
       transform: translate(-50%, -50%);
     }
@@ -73,8 +80,8 @@
     content: "";
     background: rgba($color: $white, $alpha: 0.5);
     border-radius: 50%;
-    top: 50%;
-    left: 50%;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
     position: absolute;
     transform-origin: top left;
     animation-name: grow;
@@ -121,18 +128,17 @@
     text-align: center;
 
     @include mobile-xs {
-      margin-top: 50px;
+      margin-block-start: 50px;
     }
 
     h2 {
-      margin-top: 60px;
+      margin-block: 60px 50px;
       line-height: 65px;
-      margin-bottom: 50px;
 
       @include tablet {
         font-size: 35px;
         line-height: 44px;
-        margin: 40px 0 30px;
+        margin-block: 40px 30px;
       }
       @include mobile {
         font-size: 24px;
@@ -141,7 +147,9 @@
     }
 
     &-buttons {
-      @extend .hero-content-buttons;
+      // @extend .hero-content-buttons; was removed because the class is not defined anywhere in the project
+      // This seems to be a leftover from a previous version of the theme.
+      // The buttons are styled with the .btn-platform class in _buttons.scss
     }
   }
 }
