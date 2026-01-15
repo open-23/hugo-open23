@@ -15,7 +15,6 @@ The Open23 Hugo Theme is based on [Apsho](https://github.com/StaticMania/hugo-ap
 - [Main Features](#features)
 - [Support](#support)
 - [Licensing](#licensing)
-- [Hire](#hire)
 
 ## Live Demo
 
@@ -51,7 +50,6 @@ Checkout the live demo [here](https://open23.de/)
 - Well formatted code.
 - Easy Customization.
 - FabForm.io [static website form](https://fabform.io).
-- Forestry Integrated.
 - Crafted for Personal Portfolio
 
 ## Licensing
