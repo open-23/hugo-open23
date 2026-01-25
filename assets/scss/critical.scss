@@ -2,6 +2,16 @@
 // This file now contains all necessary Bootstrap modules and our custom variables.
 @import "custom-bootstrap";
 
+@import "variables";
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+@import "fonts";
+
+@import "typography";
+
+@import "mixins";
+
 // 2. OWN CUSTOMIZE DESIGN (critical components)
 // These are the styles for the "above-the-fold" content.
 @import "typography";    

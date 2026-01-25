@@ -1,16 +1,16 @@
-#  icons can be found on https://themify.me/themify-icons
+#  icons can be found on https://fontawesome.com/icons
 ---
 enable: true
 title: You can benefit more than you think
 services:
-  - icon: ti-settings
+  - icon: fa-solid fa-gear
     title: No Setup
     description: They generate alignment and engagement
 
-  - icon: ti-check-box
+  - icon: fa-solid fa-square-check
     title: Free Trial
     description: They generate alignment and engagement
 
-  - icon: ti-key
+  - icon: fa-solid fa-key
     title: Quick Access
     description: They generate alignment and engagement
