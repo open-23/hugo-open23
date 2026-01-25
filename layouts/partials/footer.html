@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-4 col-md-4">
         <div class="footer-description">
-          <img src="{{ .Site.Params.logo | absURL }}" alt="logo">
+          <img src="{{ .Site.Params.logo | absURL }}" alt="logo" width="153" height="42">
           <p>
             {{ .Site.Params.copyright1 }}
               </br>
@@ -41,9 +41,9 @@
           {{ $address := .Site.Params.address }}
           <div class="footer-widget-list">
             <ul>
-              <!-- <li><a href="tel:{{ $address.phone }}"><i class="ti-mobile"></i>{{ $address.phone }}</a></li> --> 
+              <!-- <li><a href="tel:{{ $address.phone }}"><i class="fa-solid fa-mobile"></i>{{ $address.phone }}</a></li> -->
               <li><a href="mailto:{{ $address.email }}" aria-label={{ $address.email }}>{{ $address.email }}</a></li>
-              <!-- <li><p><i class="ti-pin"></i>{{ $address.address }}</p></li> -->
+              <!-- <li><p><i class="fa-solid fa-location-dot"></i>{{ $address.address }}</p></li> -->
             </ul>
           </div>
         </div>

@@ -8,28 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  <!-- {{ "<!-- Themify -->" | safeHTML }}-->
-  <!-- <link rel="stylesheet" href="{{ "themify/themify.css" | absURL }}"> -->
-
   {{ "<!-- Fontawesome -->" | safeHTML }}
   <link rel="stylesheet" href="{{ "fontawesome/css/fontawesome.css" | absURL }}">
   <link rel="stylesheet" href="{{ "fontawesome/css/brands.css" | absURL }}">
   <link rel="stylesheet" href="{{ "fontawesome/css/solid.css" | absURL }}">
   <link rel="stylesheet" href="{{ "fontawesome/css/regular.css" | absURL }}">
 
-{{ "" | safeHTML }}
-<!-- Wir sagen Hugo, dass node_modules ein Suchpfad für SCSS ist -->
-{{ $opts := dict
-  "includePaths" (slice "node_modules")
-  "transpiler" "dartsass"
-  "enableSourceMap" (not hugo.IsProduction)
-}}
-
-{{ with resources.Get "scss/critical.scss" }}
-  <!-- Hier übergeben wir die $opts an den Sass-Compiler -->
-  {{ $stylex := . | toCSS $opts | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $stylex.RelPermalink }}" integrity="{{ $stylex.Data.Integrity }}">
-{{ end }}
+  {{ "<!-- Critical CSS -->" | safeHTML }}
+  {{ $stylex := resources.Get "scss/critical.scss" | css.Sass | minify }}
+  <link href="{{ $stylex.Permalink }}" rel="stylesheet" />
 
   {{ "<!--Favicon-->" | safeHTML }}
   <link rel="shortcut icon" href="{{ "images/favicon.png" | absURL }}" type="image/x-icon" />

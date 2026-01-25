@@ -92,6 +92,9 @@
       margin-inline: auto;
     }
   }
+  .row .col-lg-4, .row .col-md-6 {
+    margin-bottom: 20px;
+  }
   &-pagination {
     display: flex;
     justify-content: center;
@@ -133,6 +136,13 @@
         &.active .page-link {
           background-color: $primary-color;
           color: $white;
+        }
+        &.prev, &.next {
+          .page-link {
+            @include mobile {
+              font-size: 20px;
+            }
+          }
         }
       }
     }
