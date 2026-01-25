@@ -2,6 +2,11 @@
 
 @import "mixins";
 
+// Old plugin styles removed (replaced by modern alternatives):
+// - Slick Slider → Swiper (CSS imported via main.js)
+// - Magnific Popup → GLightbox (CSS imported via main.js)
+// - AOS → Not used
+
 @import "common";
 
 @import "components/service";
