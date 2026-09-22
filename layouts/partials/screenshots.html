@@ -1,4 +1,5 @@
-{{ with .Site.Data.screenshots }}
+{{ $data := index hugo.Data site.Language.Lang }}
+{{ with $data.screenshots }}
   {{ if .enable }}
     <section class="screenshots">
       <div class="container">

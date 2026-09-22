@@ -1,6 +1,6 @@
-{{ with .Site.Data.homeblog }}
-  {{ $blogPosts := where $.Site.RegularPages "Section" "blog" }}
-  {{ if and .enable $blogPosts }}
+{{ $data := index hugo.Data site.Language.Lang }}
+{{ with $data.homeblog }}
+  {{ if .enable }}
     <section class="blog-post" id="blog">
       <div class="container">
         <div class="row">

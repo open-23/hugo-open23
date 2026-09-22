@@ -1,0 +1,33 @@
+{{ $data := index hugo.Data site.Language.Lang }}
+{{ with $data.service }}
+{{ if .enable }}
+<section class="service" id="service">
+  <div class="container">
+    <div class="service-header">
+        <h2 class="service-title">{{ .title }}</h2>
+    </div>
+
+    <div class="service-content">
+      <div class="service-grid">
+        {{ $services := .services }}
+        {{ range $services }}
+        <article class="service-card">
+            {{ if .image }}
+            <div class="service-card-icon">
+               <img src={{ .image | absURL }} alt="services" ></img>
+            </div>
+            {{ end }} 
+            <h3 class="service-card-title">{{ .subtitle }}</h3>
+            <p class="service-card-description">{{ .description }}</p>
+            <a href="{{ .link | relLangURL }}" class="service-card-link">
+              {{ .link_text | default "Mehr erfahren" }}
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+        </article>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
