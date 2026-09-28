@@ -17,7 +17,7 @@
                <i class="{{ .icon }}"></i>
             </div>
             {{ end }} 
-            <h3 class="service-card-title">{{ .subtitle }}</h3>
+            <h3 class="service-card-title">{{ .title }}</h3>
             <p class="service-card-description">{{ .description }}</p>
             <a href="{{ .link | relLangURL }}" class="service-card-link">
               {{ .link_text | default "Mehr erfahren" }}

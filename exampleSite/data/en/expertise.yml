@@ -1,0 +1,34 @@
+#  icons can be found on https://fontawesome.com/icons
+---
+enable: true
+title: Expertise
+expertises:
+  - icon: fa-regular fa-pen-to-square
+    title: No Setup
+    subtitle: No Setup II
+    description: They generate alignment and engagement
+
+  - icon: fa-regular fa-pen-to-square
+    title: No Setup
+    subtitle: No Setup II
+    description: They generate alignment and engagement
+
+  - icon: fa-regular fa-pen-to-square
+    title: No Setup
+    subtitle: No Setup II
+    description: They generate alignment and engagement
+
+  - icon: fa-regular fa-pen-to-square
+    title: No Setup
+    subtitle: No Setup II
+    description: They generate alignment and engagement
+
+  - icon: fa-regular fa-pen-to-square
+    title: No Setup
+    subtitle: No Setup II
+    description: They generate alignment and engagement
+
+  - icon: fa-regular fa-pen-to-square
+    title: No Setup
+    subtitle: No Setup II
+    description: They generate alignment and engagement

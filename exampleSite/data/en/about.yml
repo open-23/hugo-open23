@@ -1,0 +1,37 @@
+---
+enable: true
+title: Team
+subTitle: 
+
+firstName: Max Mustermann
+description: They generate alignment and engagement.
+description2: They generate alignment and engagement.
+image1: images/about/landingpage.webp
+shapeImageFirst1: images/about/feature-shape-02.svg
+shapeImageFirst2: images/about/feature-shape-04.svg
+shapeImageFirst3: images/about/feature-shape-02.svg
+firstSocial:
+  links:
+    - icon: fa-solid fa-globe
+      title: example.com
+      url: "https://exmaple.com"
+    - icon: fa-brands fa-linkedin
+      title: LinkedIn
+      url: "https://www.linkedin.com/in/exmaple"
+
+secondName: Max Mustermann
+description2nd: x Mustermann
+description: They generate alignment and engagement.
+description2nd2: x Mustermann
+description: They generate alignment and engagement.
+image2: images/about/landingpage.webp
+shapeImageSecond1: images/about/feature-shape-02.svg
+shapeImageSecond2: images/about/feature-shape-04.svg
+secondSocial:
+  links:
+    - icon: fa-solid fa-globe
+      title: example.com
+      url: "https://exmaple.com"
+    - icon: fa-brands fa-linkedin
+      title: LinkedIn
+      url: "https://www.linkedin.com/in/exmaple"

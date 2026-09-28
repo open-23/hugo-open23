@@ -48,6 +48,7 @@ Checkout the live demo [here](https://open23.de/)
 - Powered by Vanilla JS.
 - Blog Support.
 - Well formatted code.
+- Mutli Langugages
 - Easy Customization.
 - Self hosted Icons from Forntawesome Version 7.3.1(https://fontawesome.com/icons).
 - Crafted for Personal Portfolio
