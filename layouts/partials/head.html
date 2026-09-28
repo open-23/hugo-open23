@@ -9,10 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
   {{ "<!-- Fontawesome -->" | safeHTML }}
-  <link rel="stylesheet" href="{{ "fontawesome/css/fontawesome.css" | absURL }}">
-  <link rel="stylesheet" href="{{ "fontawesome/css/brands.css" | absURL }}">
-  <link rel="stylesheet" href="{{ "fontawesome/css/solid.css" | absURL }}">
-  <link rel="stylesheet" href="{{ "fontawesome/css/regular.css" | absURL }}">
+  <link rel="stylesheet" href="{{ "fontawesome/css/fontawesome.min.css" | absURL }}">
+  <link rel="stylesheet" href="{{ "fontawesome/css/brands.min.css" | absURL }}">
+  <link rel="stylesheet" href="{{ "fontawesome/css/solid.min.css" | absURL }}">
+  <link rel="stylesheet" href="{{ "fontawesome/css/regular.min.css" | absURL }}">
 
   {{ "<!-- Critical CSS -->" | safeHTML }}
   {{ $stylex := resources.Get "scss/critical.scss" | css.Sass | minify }}

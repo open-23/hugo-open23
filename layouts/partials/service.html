@@ -12,9 +12,9 @@
         {{ $services := .services }}
         {{ range $services }}
         <article class="service-card">
-            {{ if .image }}
+            {{ if .icon }}
             <div class="service-card-icon">
-               <img src={{ .image | absURL }} alt="services" ></img>
+               <i class="{{ .icon }}"></i>
             </div>
             {{ end }} 
             <h3 class="service-card-title">{{ .subtitle }}</h3>
