@@ -2,6 +2,7 @@
 baseURL = "https://open23.de/"
 title = "Open23| App landing template"
 theme = "open23"
+locale = "en-us"
 disableKinds = ['taxonomy', 'term']
 enableRobotsTXT = true
 defaultContentLanguage = 'en'

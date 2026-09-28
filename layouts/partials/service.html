@@ -20,7 +20,7 @@
             <h3 class="service-card-title">{{ .title }}</h3>
             <p class="service-card-description">{{ .description }}</p>
             <a href="{{ .link | relLangURL }}" class="service-card-link">
-              {{ .link_text | default "Mehr erfahren" }}
+              {{ .link_text }}
               <span aria-hidden="true">&rarr;</span>
             </a>
         </article>

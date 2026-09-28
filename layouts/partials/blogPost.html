@@ -1,4 +1,5 @@
 {{ $data := index hugo.Data site.Language.Lang }}
+{{ $blogPosts := where $.Site.RegularPages "Section" "blog" }}
 {{ with $data.homeblog }}
   {{ if .enable }}
     <section class="blog-post" id="blog">
