@@ -1,68 +1,78 @@
 # MAIN base
 baseURL = "https://open23.de/"
-languageCode = "en-us"
 title = "Open23| App landing template"
 theme = "open23"
+locale = "en-us"
+disableKinds = ['taxonomy', 'term']
+enableRobotsTXT = true
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
 
-# Navigation Bar
-[[menu.main]]
-    name = "Home"
-    url = "#hero"
+[languages.en]
+    disabled = false
+    local = 'en-GB'
+    direction = 'ltr'
+    label = 'English'
     weight = 1
-[[menu.main]]
-    name = "About"
-    url = "#feature"
+[languages.en.params]
+    title = "Exmaple - Exmaple everywhere"
+    copyright1 = "All right reserved"
+[[languages.en.menu.main]]
+    name = "Home"
+    url = "#main"
+    weight = 1
+[[languages.en.menu.main]]
+    name = "Service"
+    url = "#service"
     weight = 2
-[[menu.main]]
-    name = "Services"
-    url = "#faq"
+[[languages.en.menu.main]]
+    name = "Expertise"
+    url = "#expertise"
     weight = 3
-[[menu.main]]
+[[languages.en.menu.main]]
+    name = "Team"
+    url = "#team"
+    weight = 4
+[[languages.en.menu.main]]
     name = "Blog"
     url = "#blog"
     weight = 4
-
 # Footer Sitemap
-[[menu.sitemap]]
+[[languages.en.menu.sitemap]]
     name = "Home"
     url = "#"
     weight = 1
-[[menu.sitemap]]
+[[languages.en.menu.sitemap]]
+    name = "Privacy policy"
+    url = "/privacy"
+    weight = 2
+[[languages.en.menu.sitemap]]
+    name = "Imprint"
+    url = "/imprint"
+    weight = 3
+[[languages.en.menu.sitemap]]
     name = "Latest Article"
     url = "/blog"
-    weight = 2
-[[menu.sitemap]]
-    name = "Privacy & Policy"
-    url = "/privacy"
-    weight = 3
-[[menu.sitemap]]
-    name = "Contact"
-    url = "/contact"
     weight = 4
 
 # Footer Address
 [params.address]
-address = "23 Khan Niketon, Grand Street, NYK."
-email = "apsho@example.com"
+address = "23 Max Mustermann, Grand Street, NYK."
+email = "max@example.com"
 phone = "+(448) 833 5272 332"
 
 # Footer Social
 [params.social]
-facebook = "https://www.facebook.com/pg/staticmania"
-twitter = "https://twitter.com/static_mania"
-github = "https://github.com/StaticMania"
+linkedIn = "https://www.linkedin.com/company/example"
+github = "https://github.com/example"
 
 [params]
 
 # Header
 logo = "images/logo.png"
-fabFormURL = "https://fabform.io/f/zWMBVeW"
-googleAnalytics = "UA-175025671-2"
 
 # Footer
-footerTitle = "Get the latest app updates"
-copyright1 = "All right reserved"
-copyright2 = "Copyright ©  <a href=\"https://staticmania.com/\" target=\"_blank\">StaticMania </a> {year}"
+copyright2 = "Copyright ©  <a href=\"https://example.com/\" target=\"_blank\">Exmaple </a> {year}"
 
 #contact
-email = "help@staticmania.com"
+email = "help@example.com"

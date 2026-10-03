@@ -1,0 +1,10 @@
+#  icons can be found on https://fontawesome.com/icons
+---
+enable: true
+title: You can benefit more than you think
+services:
+  - icon: fa-regular fa-pen-to-square
+    title: No Setup
+    description: They generate alignment and engagement
+    link: /service/service-story
+    link_text: More information
