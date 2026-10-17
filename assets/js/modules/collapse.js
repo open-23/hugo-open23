@@ -17,7 +17,7 @@
  */
 
 export function initCollapses() {
-  const triggers = document.querySelectorAll('[data-bs-toggle="collapse"]');
+  const triggers = document.querySelectorAll(`[data-bs-toggle="collapse"]`);
 
   triggers.forEach(trigger => {
     trigger.addEventListener('click', function(e) {
@@ -32,7 +32,7 @@ export function initCollapses() {
       if (parent) {
         const parentElement = document.querySelector(parent);
         if (parentElement) {
-          const siblings = parentElement.querySelectorAll('.collapse.show');
+          const siblings = parentElement.querySelectorAll(`.collapse.show`);
           siblings.forEach(sibling => {
             if (sibling !== target) {
               collapse(sibling);
@@ -59,7 +59,7 @@ export function initCollapses() {
   });
 
   // AUTO-CLOSE: Closes the mobile menu when a link is clicked
-  const dismissLinks = document.querySelectorAll('[data-bs-dismiss="collapse"]');
+  const dismissLinks = document.querySelectorAll(`[data-bs-dismiss="collapse"]`);
   dismissLinks.forEach(link => {
     link.addEventListener('click', function() {
       const targetSelector = this.getAttribute('data-bs-target');
@@ -76,7 +76,7 @@ export function initCollapses() {
   });
 
   // STICKY-LOGIK
-  const nav = document.querySelector('.main-nav');
+  const nav = document.querySelector(`.main-nav`);
   if (nav) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {

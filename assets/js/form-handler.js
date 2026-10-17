@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
     form.reset();
     button.style.display = "none";
     status.innerHTML = "Thanks! Your message has been sent successfully.";
-    status.className = 'contact-form-status success';
+    status.className = "contact-form-status success";
   };
 
   const handleError = (errorMsg) => {
