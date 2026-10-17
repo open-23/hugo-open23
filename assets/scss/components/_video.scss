@@ -145,12 +145,6 @@
         line-height: 34px;
       }
     }
-
-    &-buttons {
-      // @extend .hero-content-buttons; was removed because the class is not defined anywhere in the project
-      // This seems to be a leftover from a previous version of the theme.
-      // The buttons are styled with the .btn-platform class in _buttons.scss
-    }
   }
 }
 

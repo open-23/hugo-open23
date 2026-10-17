@@ -12,7 +12,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
  * 5 slides desktop, 3 tablet, 1 mobile
  */
 export function initScreenshotsSlider() {
-  const container = document.querySelector('.screenshots-slider');
+  const container = document.querySelector(`.screenshots-slider`);
   if (!container) return;
 
   // Convert existing structure to Swiper if needed
@@ -54,7 +54,7 @@ export function initScreenshotsSlider() {
  * 3 slides, vertical direction, center mode, click-to-slide
  */
 export function initTestimonialSlider() {
-  const container = document.querySelector('.testimonial-slider');
+  const container = document.querySelector(`.testimonial-slider`);
   if (!container) return;
 
   // Convert existing structure to Swiper if needed

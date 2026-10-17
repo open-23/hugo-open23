@@ -1,28 +1,22 @@
 .hero {
-  position: relative;
-  padding-block: 150px 80px;
+  // position: relative;
+  padding-block: 80px 80px;
   overflow: hidden;
   z-index: 1; // Creates a stack context
 
-  &-shape {
-    position: absolute;
-    width: 100%;
-    inset-block-start: 0;
-    inset-inline-start: 0;
-    z-index: -1; // Pushes the shape behind the content
-    pointer-events: none; // Prevents SVG from blocking clicks on buttons
+  background-color: $secondary-color-transparent;
 
-    svg {
-      position: absolute;
-      inset-block-start: 0;
-      inset-inline-end: 0;
-      width: 65%;
+  @media (max-width: 768px) {
+    background-color: transparent; /* Gelb für Mobilgeräte */
+  }
 
-      circle {
-        fill: $secondary-color-transparent; 
-        transition: fill 0.3s ease;
-      }
-    }
+  &-caption {
+    color: $primary-color;
+  }
+
+  &-image {
+    padding-left: 10%;
+    max-width: 100%;
   }
 
   // Ensure that the text/image container is above it
